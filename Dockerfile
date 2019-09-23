@@ -26,6 +26,8 @@ RUN curl -sL https://storage.googleapis.com/kubernetes-helm/helm-${helm}-linux-a
     mv linux-amd64/helm /usr/local/bin/helm && \
     chmod +x /usr/local/bin/helm
 
-COPY .m2/ /root/.m2/
+VOLUME /root/.aws
+VOLUME /root/.kube
+VOLUME /root/.helm
 
 ENTRYPOINT ["bash"]
