@@ -67,9 +67,11 @@ _package() {
     _check_version "helm"
     _check_version "kubectl"
 
-    if [ ! -z "${CHANGED}" ]; then
-        _check_version "awscli"
+    if [ -z "${CHANGED}" ]; then
+        _error
     fi
+
+    _check_version "awscli"
 }
 
 _check_version() {
