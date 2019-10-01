@@ -12,7 +12,7 @@ docker pull opspresso/deployer
 ## versions
 
 ```
-ENV kubectl v1.15.4
 ENV awscli 1.16.244
+ENV kubectl v1.15.4
 ENV helm v2.14.3
 ```
