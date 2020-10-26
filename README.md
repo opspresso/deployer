@@ -14,5 +14,5 @@ docker pull opspresso/deployer
 ```
 ENV awscli 1.18.118
 ENV kubectl v1.19.3
-ENV helm v3.3.4
+ENV helm v3.4.0
 ```
