@@ -6,13 +6,13 @@ RUN apk add -v --update bash curl python py-pip jq git file && \
     apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing hub
 
 # awscli
-ENV awscli 2.2.46
+ENV awscli 2.3.4
 RUN pip install --upgrade awscli==${awscli} && \
     apk del -v --purge py-pip && \
     rm /var/cache/apk/*
 
 # kubectl
-ENV kubectl v1.22.3
+ENV kubectl v1.22.4
 RUN curl -sLo /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/${kubectl}/bin/linux/amd64/kubectl && \
     chmod +x /usr/local/bin/kubectl
 
